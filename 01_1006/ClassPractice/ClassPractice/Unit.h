@@ -1,11 +1,19 @@
 #ifndef   Unit_h_
 #define   Unit_h_
 
+
+
 class Unit
 {
-
 public:
+	//コンストラクタ
+	Unit();
+	//デストラクタ
+	~Unit();
+	//ステータス表示
+	void PrintStatus();
 
+private:
 	int m_hp;
 	int m_str;
 	int m_mag;
@@ -15,10 +23,7 @@ public:
 	int m_luc;
 	int m_mde;
 
-	//コンストラクタ
-	Unit();
-	//デストラクタ
-	~Unit();
+	
 };
 
 Unit::Unit()
@@ -37,6 +42,7 @@ Unit::~Unit()
 {
 
 }
+
 
 
 #endif
