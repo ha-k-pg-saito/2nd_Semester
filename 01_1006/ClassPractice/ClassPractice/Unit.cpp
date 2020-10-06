@@ -1,24 +1,39 @@
 #include"Unit.h"
 #include"Common.h"
+#include"Definition.h"
 
 //FighterƒNƒ‰ƒX
 
 int main()
-{
-	Unit unit;
-	
+{	
 	system("pause");
 	return 0;
 }
+Unit::Unit()
+{
+	g_Status._hp = 0;
+	g_Status._str = 0;
+	g_Status._mag = 0;
+	g_Status._tec = 0;
+	g_Status._spd = 0;
+	g_Status._def = 0;
+	g_Status._luc = 0;
+	g_Status._mde = 0;
+}
+
+Unit::~Unit()
+{
+
+}
 void Unit::PrintStatus()
 {
-	printf("m_hp=%d\n", m_hp);
-	printf("m_str=%d\n", m_str);
-	printf("m_mag=%d\n", m_mag);
-	printf("m_tec=%d\n", m_tec);
-	printf("m_spd=%d\n", m_spd);
-	printf("m_def=%d\n", m_def);
-	printf("m_luc=%d\n", m_luc);
-	printf("m_mde=%d\n", m_mde);
+	printf("m_hp=%d\n", g_Status._hp);
+	printf("m_str=%d\n", g_Status._str);
+	printf("m_mag=%d\n", g_Status._mag);
+	printf("m_tec=%d\n", g_Status._tec);
+	printf("m_spd=%d\n", g_Status._spd);
+	printf("m_def=%d\n", g_Status._def);
+	printf("m_luc=%d\n", g_Status._luc);
+	printf("m_mde=%d\n", g_Status._mde);
 
 }
