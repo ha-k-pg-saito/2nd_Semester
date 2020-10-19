@@ -1,7 +1,9 @@
 #ifndef Enemyh_h_
 #define Enemyh_h_
 
-class Enemy
+#include"../Practice02_05/Base.h"
+
+class Enemy:public Base
 {
 public:
 	Enemy();
@@ -10,22 +12,6 @@ public:
 public:
 	void Exec();
 	void Draw();
-
-public:
-	void SetHp(int hp);
-	void SetPos(float x, float y);
-	void SetMoveSpeed(float speed);
-
-	int GetHp();
-	float GetPosX();
-	float GetPosY();
-	float GetMoveSpeed();
-
-private:
-	int m_Hp;
-	float m_PosX;
-	float m_PosY;
-	float m_MoveSpeed;
 
 	//Enemy専用変数
 	int m_Routine;		//行動ルーチン管理変数
