@@ -5,11 +5,12 @@ Enemy::Enemy()
 {
 	//Enemy専用変数
 	m_Routine = 0;
+	printf("Enemyのコンストラクタ\n");
 }
 
 Enemy::~Enemy()
 {
-
+	printf("Enemyのデストラクタ\n");
 }
 
 void Enemy::Exec()

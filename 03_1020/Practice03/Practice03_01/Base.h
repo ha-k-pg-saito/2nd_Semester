@@ -5,7 +5,7 @@ class Base
 {
 public:
 	Base();
-	virtual ~Base();
+   virtual ~Base();
 
 public:
 	//ˆø”‚Ì‹éŒ`î•ñ‚ÆA“–‚½‚è”»’è
