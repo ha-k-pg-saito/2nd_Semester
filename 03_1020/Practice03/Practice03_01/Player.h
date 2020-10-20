@@ -1,7 +1,8 @@
 #ifndef Player_h_
 #define Player_h_
 
-class Player
+#include"Base.h"
+class Player 
 {
 public:
 	Player();
@@ -16,13 +17,13 @@ public:
 	void SetPos(float x, float y);
 	void SetMoveSpeed(float speed);
 
-	int GetHp();
+	int   GetHp();
 	float GetPosX();
 	float GetPosY();
 	float GetMoveSpeed();
 
 private:
-	int m_Hp;
+	int   m_Hp;
 	float m_PosX;
 	float m_PosY;
 	float m_MoveSpeed;

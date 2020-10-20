@@ -1,6 +1,7 @@
 #ifndef Enemyh_h_
 #define Enemyh_h_
 
+#include"Base.h"
 class Enemy
 {
 public:
