@@ -15,12 +15,12 @@ Enemy::~Enemy()
 
 void Enemy::Exec()
 {
-
+	printf("Enemy‚ÌExec\nn");
 }
 
 void Enemy::Draw()
 {
-
+	printf("Enemy‚ÌDraw\n");
 }
 
 bool Enemy::CheckHit(int x, int y, int width, int height)
