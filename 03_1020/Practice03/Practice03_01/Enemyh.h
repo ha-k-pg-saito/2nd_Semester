@@ -2,7 +2,7 @@
 #define Enemyh_h_
 
 #include"Base.h"
-class Enemy
+class Enemy:public Base
 {
 public:
 	Enemy();
@@ -11,23 +11,10 @@ public:
 public:
 	void Exec();
 	void Draw();
-
-public:
-	void SetHp(int hp);
-	void SetPos(float x, float y);
-	void SetMoveSpeed(float speed);
-
-	int GetHp();
-	float GetPosX();
-	float GetPosY();
-	float GetMoveSpeed();
+	//引数の矩形情報と、当たり判定
+	virtual bool CheckHit(int x, int y, int width, int height);
 
 private:
-	int m_Hp;
-	float m_PosX;
-	float m_PosY;
-	float m_MoveSpeed;
-
 	//Enemy専用変数
 	int m_Routine;		//行動ルーチン管理変数
 };

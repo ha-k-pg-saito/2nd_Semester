@@ -1,4 +1,5 @@
 #include "Base.h"
+#include<stdio.h>
 
 Base::Base()
 {
@@ -16,10 +17,12 @@ Base::~Base()
 
 }
 
-bool Base::CheckHit(int x, int y, int width, int height);
- {
+bool Base::CheckHit(int x, int y, int width, int height)
+{
+	printf("BaseクラスのCheckHit()\n");
+	//オーバーライド元の関数をつかうには明確に宣言して呼び出す
 	return false;
- }
+}
 
 void Base::SetHp(int hp)
 {
