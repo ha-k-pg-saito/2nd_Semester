@@ -1,7 +1,7 @@
 ﻿#include<stdio.h>
-#include<stdlib.h>
 #include"Enemyh.h"
 #include"Player.h"
+#include"EnemyManager.h"
 
 void printHp(Base* target)
 {
@@ -13,6 +13,7 @@ void printHp(Base* target)
 }
 int main()
 {
+    /*
     //Baseのポインタ変数配列
     Base* array[] =
     {
@@ -43,9 +44,29 @@ int main()
     //純粋仮想関数を宣言したクラスは、
     //単体で実体化させることができなくなる
    //抽象クラスと呼ぶ
-   /* Base base;
-    Base* pBase = new Base();*/
+    Base base;
+    Base* pBase = new Base();
+   */ 
 
+    EnemyManager* enemyMng = new EnemyManager();
+    Base* pEnemy           = nullptr;
+    //ステージ開始時点でまとめて初期化
+    enemyMng->CreateEnemy(0);
+    enemyMng->CreateEnemy(1);
+    pEnemy=enemyMng->CreateEnemy(2);
+    enemyMng->CreateEnemy(3);
+    enemyMng->CreateEnemy(4);
+    enemyMng->CreateEnemy(4);
+    enemyMng->CreateEnemy(4);
+
+    //作成したエネミーに各処理をおこなわせる
+    enemyMng->Exec();
+    enemyMng->Draw();
+
+    //指定したエネミーを削除
+    enemyMng->DestroyEnemy(pEnemy);
+    //指定座標と接触しているエネミーを取得
+    pEnemy = enemyMng->CheckHit(10, 10, 20, 30);
 
     system("pause");
     return 0;
